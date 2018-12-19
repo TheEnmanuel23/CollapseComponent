@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { Icon } from "react-icons-kit";
 import { ic_keyboard_arrow_right } from "react-icons-kit/md/ic_keyboard_arrow_right";
 import { ic_keyboard_arrow_down } from "react-icons-kit/md/ic_keyboard_arrow_down";
+import { CSSTransition } from "react-transition-group";
 import "./styles.css";
 
 class CollapseItem extends React.Component {
@@ -25,7 +26,14 @@ class CollapseItem extends React.Component {
           )}
           <span>{title}</span>
         </div>
-        {collapsed && <div className="collapse-panel">{children}</div>}
+        <CSSTransition
+          in={collapsed}
+          timeout={300}
+          classNames="show-collapse-panel"
+          unmountOnExit
+        >
+          <div className="collapse-panel">{children}</div>
+        </CSSTransition>
       </div>
     );
   }
@@ -48,6 +56,18 @@ function App() {
             asperiores repellat perferendis doloremque facilis, ducimus eum
             natus, dolorem neque ipsa est?
           </span>
+          <p>
+            2 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Perspiciatis laboriosam pariatur quasi et? Nihil non quae vitae quam
+            asperiores repellat perferendis doloremque facilis, ducimus eum
+            natus, dolorem neque ipsa est?
+          </p>
+          <p>
+            2 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Perspiciatis laboriosam pariatur quasi et? Nihil non quae vitae quam
+            asperiores repellat perferendis doloremque facilis, ducimus eum
+            natus, dolorem neque ipsa est?
+          </p>
         </Collapse.CollapseItem>
         <Collapse.CollapseItem title="panel 2">
           <p>
