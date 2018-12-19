@@ -1,7 +1,8 @@
-.collapse-header {
-  cursor: pointer;
+.collapse .collapse-item:nth-child(even) {
+  margin-top: 10px;
 }
 .collapse-header {
+  cursor: pointer;
   font-weight: bold;
 }
 .collapse-panel {
@@ -17,10 +18,10 @@
 }
 .show-collapse-panel-enter-active {
   max-height: 300px;
-  transition: all 300ms ease-out;
+  transition: all 200ms ease-out;
 }
 .show-collapse-panel-exit-active {
   max-height: 0;
-  transition: all 300ms ease-out;
+  transition: all 200ms ease-out;
   overflow: hidden;
 }

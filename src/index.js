@@ -28,7 +28,7 @@ class CollapseItem extends React.Component {
         </div>
         <CSSTransition
           in={collapsed}
-          timeout={300}
+          timeout={200}
           classNames="show-collapse-panel"
           unmountOnExit
         >
